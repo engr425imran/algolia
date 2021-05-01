@@ -21,3 +21,10 @@ Route::view('vue', 'vue');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('search', function() {
+  
+
+    $articles = App\Models\Bed::search('Alejandrin')->get();
+
+    return $articles;
+});

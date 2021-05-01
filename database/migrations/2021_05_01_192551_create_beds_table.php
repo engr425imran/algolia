@@ -15,6 +15,10 @@ class CreateBedsTable extends Migration
     {
         Schema::create('beds', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('price');
+            $table->integer('quantity');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -29,3 +33,5 @@ class CreateBedsTable extends Migration
         Schema::dropIfExists('beds');
     }
 }
+
+ 
